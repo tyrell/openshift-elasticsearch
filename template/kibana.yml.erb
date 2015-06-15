@@ -8,7 +8,7 @@ host: "<%= ENV['OPENSHIFT_ELASTICSEARCH_IP'] %>"
 elasticsearch_url: "http://<%= ENV['OPENSHIFT_ELASTICSEARCH_IP'] %>:9200"
 
 # Might need to use this url when application is scaled.
-#elasticsearch_url: "http://<%= ENV['OPENSHIFT_APP_DNS'] %>/<%= ENV['ELASTICSEARCH_PATH'] %>"
+#elasticsearch_url: "http://<%= ENV['OPENSHIFT_APP_DNS'] %>"
 
 # preserve_elasticsearch_host true will send the hostname specified in `elasticsearch`. If you set it to false,
 # then the host you use to connect to *this* Kibana instance will be sent.

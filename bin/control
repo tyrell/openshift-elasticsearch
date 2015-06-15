@@ -76,7 +76,7 @@ function start() {
   fi
 
   # Make sure elasticsearch is up and running first
-  esUrl="http://$OPENSHIFT_ELASTICSEARCH_IP:$OPENSHIFT_ELASTICSEARCH_PORT/$ELASTICSEARCH_PATH"
+  esUrl="http://$OPENSHIFT_ELASTICSEARCH_IP:$OPENSHIFT_ELASTICSEARCH_PORT/"
   counter=0
   until [ $(curl -s -o /dev/null -w '%{http_code}\n' $esUrl) -ge 500 -o $counter -gt 6 ]; do
     echo "counter $counter"
